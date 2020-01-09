@@ -27,6 +27,7 @@ jobs:
       run: |
         git config --local user.email "sohailsmerchant@github.com"
         git config --local user.name "sohailmerchant"
+        git add .
         git commit -m "Add changes" -a
         
     - name: Push changes
