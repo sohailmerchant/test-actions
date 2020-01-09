@@ -22,3 +22,14 @@ jobs:
       run: |
         echo Running script...,
         python test_actions.py
+        
+    - name: Commit files
+      run: |
+        git config --local user.email "sohailsmerchant@github.com"
+        git config --local user.name "sohailmerchant"
+        git commit -m "Add changes" -a
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_ACTION_TOKEN }}
