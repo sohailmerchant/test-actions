@@ -22,12 +22,13 @@ jobs:
       run: |
         echo Running script...,
         python clone-openiti-repos.py
+        python generate-OpenITI-metadata.py
         
     - name: Commit files
       run: |
         git config --local user.email "sohailsmerchant@github.com"
         git config --local user.name "sohailmerchant"
-        git add .
+        git add OpenITI_metadata_light.json OpenITI_metadata_light.csv OpenITI_metadata_complete.yml
         git commit -m "Add changes" -a
         
     - name: Push changes

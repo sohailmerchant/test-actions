@@ -31,7 +31,7 @@ def clone_repos(all_repos, clone_dir):
     print('Cloning...')
     counter = 1
     total_repo_nr = str(len(all_repos))
-    for repo in all_repos:
+    for repo in all_repos[:2]:
         path_to_clone = clone_dir #+ repo.split("/")[-1]
         print ('\nRepository ' + str(counter) + ' of ' + total_repo_nr + '\n')
         print(path_to_clone)
