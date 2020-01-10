@@ -21,7 +21,7 @@ jobs:
     - name: Run a multi-line script
       run: |
         echo Running script...,
-        python test_actions.py
+        python clone-openiti-repos.py
         
     - name: Commit files
       run: |
